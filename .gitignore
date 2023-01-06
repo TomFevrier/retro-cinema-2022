@@ -1,0 +1,16 @@
+/node_modules/
+/public/build/
+/public/people/original/
+/public/posters/big/
+/public/posters/original/
+/public/stills/original/
+/public/movies-metadata.json
+/top/
+
+TODO.md
+TOP.md
+note.txt
+
+package-lock.json
+
+.DS_Store

@@ -109,8 +109,6 @@
 </div>
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	.map {
 		position: absolute;
 		top: 0;

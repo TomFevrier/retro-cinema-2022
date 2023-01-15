@@ -43,6 +43,9 @@
 
 	let loaded = false;
 	$: posters && setTimeout(() => loaded = true, 500);
+
+	// console.log(uniqBy(data, 'imdbId').filter((d) => d.year >= 2021).length / uniqBy(data, 'imdbId').length)
+	console.log(uniqBy(data, 'imdbId').filter((d) => d.womenDirector), uniqBy(data, 'imdbId').length)
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -53,7 +56,7 @@
 			<div class='posters'>
 				{#each uniqBy(data, 'imdbId').filter((d) => d.medium.includes('Cinéma') && d.year === 2022).shuffle().slice(0, 60) as movie}
 					<div class='poster'>
-						<img src={posters.get(movie.imdbId || movie.title).src} />
+						<img src={posters.get(movie.imdbId || movie.title).src} alt={movie.title} />
 					</div>
 				{/each}
 			</div>
@@ -83,8 +86,6 @@
 <div style='position: absolute; top: 50%; left: 0; height: 2px; width: 100%; background: black; transform: translateY(-50%);'></div> -->
 
 <style lang='scss'>
-	@import './global.scss';
-
 	:global(a) {
 		color: $main-color;
 	}

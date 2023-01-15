@@ -209,7 +209,7 @@
 						height: position.r * 1.6
 					};
 				});
-			default:
+			case 'originCountry':
 				return data.map((d) => {
 					const circle = circles.find((e) => e.country === d.country);
 					return {
@@ -220,6 +220,8 @@
 						height: 0
 					};
 				});
+			case 'womenDirectors':
+
 		}
 	}
 
@@ -241,56 +243,64 @@
 			text: texts.grid.festival,
 			action: () => category = 'festival'
 		},
-		{
-			text: texts.grid.home,
-			action: () => category = 'home' 
-		},
-		{
-			text: texts.grid.top,
-			action: () => category = 'top'
-		},
-		{
-			text: texts.grid.rewatch,
-			action: () => category = 'rewatch'
-		},
-		{
-			text: texts.grid.discovery,
-			action: () => category = 'discovery'
-		},
-		{
-			text: texts.grid.spielberg,
-			action: () => category = 'spielberg'
-		},
-		{
-			text: texts.grid.clubEtoile,
-			action: () =>  {
-				metric = 'grid';
-				category = 'clubEtoile';
-			}
-		},
+		// {
+		// 	text: texts.grid.home,
+		// 	action: () => category = 'home' 
+		// },
+		// {
+		// 	text: texts.grid.top,
+		// 	action: () => category = 'top'
+		// },
+		// {
+		// 	text: texts.grid.rewatch,
+		// 	action: () => category = 'rewatch'
+		// },
+		// {
+		// 	text: texts.grid.discovery,
+		// 	action: () => category = 'discovery'
+		// },
+		// {
+		// 	text: texts.grid.spielberg,
+		// 	action: () => category = 'spielberg'
+		// },
+		// {
+		// 	text: texts.grid.clubEtoile,
+		// 	action: () =>  {
+		// 		metric = 'grid';
+		// 		category = 'clubEtoile';
+		// 	}
+		// },
 		{
 			text: texts.watchDate,
 			action: () => metric = 'watch-date'
 		},
+		// {
+		// 	text: texts.releaseDate,
+		// 	action: () => metric = 'release-date'
+		// },
+		// {
+		// 	text: texts.medium,
+		// 	action: () => metric = 'medium'
+		// },
+		// {
+		// 	text: texts.originCountry,
+		// 	action: () => metric = 'origin-country'
+		// },
+		// {
+		// 	text: texts.genres.slice(0, 2),
+		// 	action: () => metric = 'genres'
+		// },
+		// {
+		// 	text: texts.genres[2],
+		// 	action: () => metric = 'genres'
+		// },
 		{
-			text: texts.releaseDate,
-			action: () => metric = 'release-date'
+			text: texts.womenDirectors[0],
+			action: () => metric = 'womenDirectors'
 		},
 		{
-			text: texts.medium,
-			action: () => metric = 'medium'
-		},
-		{
-			text: texts.originCountry,
-			action: () => metric = 'origin-country'
-		},
-		{
-			text: texts.genres.slice(0, 2),
-			action: () => metric = 'genres'
-		},
-		{
-			text: texts.genres[2],
-			action: () => metric = 'genres'
+			text: texts.womenDirectors.slice(1),
+			action: () => metric = 'womenDirectors'
 		}
 	];
 
@@ -361,12 +371,12 @@
 				{#each mediumScale.domain() as medium, i}
 					<div
 						class='legend-medium-annotation'
-						class:show-line={data.filter((d) => getMedium(d.medium) === getMedium(medium)).length < 20}
+						class:show-line={data.filter((d) => getMedium(d.medium) === getMedium(medium)).length < 60}
 						style='left: {mediumScale.range()[i]}px;'
 					>
 						{#if sum(data.filter((d) => getMedium(d.medium) === getMedium(medium)), (d) => d.runtime) > 600}
 							<h3>{medium} <span class='percentage'>({@html formatPercentage(dataByMedium.get(medium).length / uniqBy(data, 'imdbId').length)})</span></h3>
-							<h5>{formatTime(sum(data.filter((d) => getMedium(d.medium) === getMedium(medium)), (d) => d.runtime))}</h5>
+							<h5>{@html formatTime(sum(data.filter((d) => getMedium(d.medium) === getMedium(medium)), (d) => d.runtime))}</h5>
 						{:else}
 							<h3>{medium}</h3>
 							<h5>({@html formatPercentage(sum(dataByMedium.get(medium), (d) => d.runtime) / sum(uniqBy(data, 'imdbId'), (d) => d.runtime))})</h5>
@@ -450,8 +460,6 @@
 </Scrolly>
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	figure {
 		position: absolute;
 		top: 50%;
@@ -671,6 +679,10 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+
+				h4 {
+					margin: 0;
+				}
 			}
 
 			.top-days {

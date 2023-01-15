@@ -67,8 +67,6 @@
 	</div>
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	.genres {
 		position: absolute;
 		left: 0;

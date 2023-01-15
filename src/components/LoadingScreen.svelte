@@ -15,8 +15,6 @@
 {/if}
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	:global(body) {
 		overflow: hidden;
 	}

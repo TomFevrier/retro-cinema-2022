@@ -37,8 +37,6 @@
 </TopContainer>
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	h2 {
 		margin-bottom: 0.5rem;
 		text-align: left;

@@ -8,8 +8,6 @@
 </section>
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	section {
 		display: flex;
 		flex-direction: column;

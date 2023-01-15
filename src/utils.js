@@ -39,7 +39,7 @@ Object.defineProperty(Array.prototype, 'unique', {
 
 Object.defineProperty(Array.prototype, 'shuffle', {
 	value: function () {
-		return [...this.sort((a, b) => Math.random() < 0.5)];
+		return [...this.sort(() => Math.random() < 0.5)];
 	}
 });
 
@@ -175,9 +175,9 @@ const formatTime = (time) => {
 	// return `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 
 	const tokens = [
-		days > 0 ? `${days} jour${days > 1 ? 's' : ''}` : null,
-		hours > 0 ? `${hours} heure${hours > 1 ? 's' : ''}` : null,
-		minutes > 0 ? `${minutes} minute${minutes > 1 ? 's' : ''}` : null,
+		days > 1 ? `${days}&nbsp;jours` : null,
+		hours > 0 ? `${days === 1 ? 24 + hours : hours}&nbsp;heure${hours > 1 ? 's' : ''}` : null,
+		minutes > 0 ? `${minutes}&nbsp;minute${minutes > 1 ? 's' : ''}` : null,
 	].filter((e) => e);
 
 	return `${tokens.slice(0, -1).join(', ')} et ${tokens.slice(-1)[0]}`;
@@ -210,7 +210,7 @@ const formatString = (str, data) => {
 		.replace('{{ NB_MOVIES_SPIELBERG }}', unique.filter((d) => isInCategory(d, 'spielberg')).length)
 		.replace('{{ TIME_CLUB_ETOILE }}', formatTime(sum(data.filter((d) => isInCategory(d, 'clubEtoile')), (d) => d.runtime)))
 		.replace('{{ NB_COUNTRIES }}', [...new Set(unique.map((d) => d.country))].length)
-		.replace('{{ %_MOVIES_POST2000 }}', formatPercentage(unique.filter((d) => d.year >= 2000) / unique.length));
+		.replace('{{ NB_WOMEN_DIRECTORS }}', unique.filter((d) => d.womenDirector).length);
 		
 	// console.log([...group(data, (d) => d.country).entries()].sort((a, b) => b[1].length - a[1].length))
 	return typografix(output);

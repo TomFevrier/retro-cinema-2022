@@ -65,8 +65,6 @@
 {/if}
 
 <style lang='scss'>
-	@import '../global.scss';
-
 	.top-people-wrapper {
 		display: flex;
 		justify-content: space-between;

@@ -1,4 +1,5 @@
 <script>
+	import { uniqBy } from 'lodash-es';
 	import { scaleSqrt } from 'd3-scale';
 	import { max } from 'd3-array';
 	import { packSiblings } from 'd3-hierarchy';
@@ -59,7 +60,7 @@
 		<Tooltip {width} x={hovered.x + width * 0.5} y={hovered.y + height * 0.5}>
 			<h3>{@html typografix(hovered.genre)}</h3>
 			{#if hovered.movies.length > 1}
-				<h5><b>{hovered.movies.length} films</b> ({@html formatPercentage(hovered.movies.length / data.unique('imdbId').length)})</h5>
+				<h5><b>{hovered.movies.length} films</b> ({@html formatPercentage(hovered.movies.length / uniqBy(data, 'imdbId').length)})</h5>
 			{/if}
 			<p class='titles'>{@html getMovieSelection(hovered.movies)}</p>
 		</Tooltip>

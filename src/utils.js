@@ -1,4 +1,4 @@
-import { min, sum } from 'd3-array';
+import { min, sum, shuffle } from 'd3-array';
 import { uniqBy } from 'lodash-es';
 
 import { formatLocale } from 'd3-format';
@@ -22,25 +22,6 @@ const { format: timeFormat } = timeFormatLocale({
 	shortDays: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
 	months: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
 	shortMonths: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
-});
-
-
-Object.defineProperty(Array.prototype, 'sum', {
-	value: function (key) {
-		return this.reduce((acc, value) => acc + value[key], 0);
-	}
-});
-
-Object.defineProperty(Array.prototype, 'unique', {
-	value: function (key) {
-		return this.filter((d, i, array) => array.findIndex((e) => e[key] === d[key]) === i);
-	}
-});
-
-Object.defineProperty(Array.prototype, 'shuffle', {
-	value: function () {
-		return [...this.sort(() => Math.random() < 0.5)];
-	}
 });
 
 
@@ -210,7 +191,7 @@ const formatString = (str, data) => {
 		.replace('{{ NB_MOVIES_SPIELBERG }}', unique.filter((d) => isInCategory(d, 'spielberg')).length)
 		.replace('{{ TIME_CLUB_ETOILE }}', formatTime(sum(data.filter((d) => isInCategory(d, 'clubEtoile')), (d) => d.runtime)))
 		.replace('{{ NB_COUNTRIES }}', [...new Set(unique.map((d) => d.country))].length)
-		.replace('{{ NB_WOMEN_DIRECTORS }}', unique.filter((d) => d.womenDirector).length);
+		.replace('{{ NB_FEMALE_DIRECTORS }}', unique.filter((d) => d.femaleDirector).length);
 		
 	// console.log([...group(data, (d) => d.country).entries()].sort((a, b) => b[1].length - a[1].length))
 	return typografix(output);
@@ -248,12 +229,12 @@ const getMovieSelection = (movies) => {
 
 	const moviesInTheater = movies.filter((d) => d.medium.includes('Cinéma') && d.year === 2022);
 	if (moviesInTheater.length >= 3) {
-		const titles = moviesInTheater.shuffle().slice(0, 3).map((d) => typografix(d.title));
+		const titles = shuffle(moviesInTheater).slice(0, 3).map((d) => typografix(d.title));
 		return `dont ${titles.slice(0, 3).join(', ')}...`;
 	}
 
 	const titles = movies.slice(0, 3).map((d) => typografix(d.title));
-	return `dont ${titles.shuffle().slice(0, 3).join(', ')}...`;
+	return `dont ${shuffle(titles).slice(0, 3).join(', ')}...`;
 }
 
 

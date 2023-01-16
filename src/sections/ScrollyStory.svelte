@@ -99,6 +99,11 @@
 			})
 		);
 
+
+	$: runtimeScale = scaleSqrt()
+		.domain([0, max(data, (d) => d.runtime)])
+		.range([0, 12]);
+
 	$: getDatePosition = width && ((date) => {
 		const formatDay = timeFormat('%u');
 		const formatWeek = timeFormat('%W');
@@ -178,10 +183,6 @@
 					};
 				});
 			case 'medium':
-				const runtimeScale = scaleSqrt()
-					.domain([0, max(data, (d) => d.runtime)])
-					.range([0, 12]);
-
 				const packings = new Map(media.map((medium) => [
 					getMedium(medium),
 					packSiblings(data
@@ -209,7 +210,7 @@
 						height: position.r * 1.6
 					};
 				});
-			case 'originCountry':
+			case 'origin-country':
 				return data.map((d) => {
 					const circle = circles.find((e) => e.country === d.country);
 					return {
@@ -220,8 +221,42 @@
 						height: 0
 					};
 				});
-			case 'womenDirectors':
+			case 'female-directors':
+				const malePacking = packSiblings([
+					{
+						r: 50
+					},
+					...data.filter((d) => !d.femaleDirector).map((d) => ({
+						...d,
+						r: runtimeScale(d.runtime)
+					}))
+				]);
 
+				const femalePacking = packSiblings(data
+					.filter((d) => d.femaleDirector)
+					.map((d) => ({
+						...d,
+						r: runtimeScale(d.runtime)
+					}))
+				);
+
+				return data.map((d) => {
+					const position = (d.femaleDirector ? femalePacking : malePacking)
+						.find(({ imdbId, date }) => d.imdbId === imdbId && d.date === date);
+
+					const center = {
+						x: width * 0.5 + (d.femaleDirector ? malePacking[0].x : 0),
+						y: height * 0.5 + (d.femaleDirector ? malePacking[0].y : 0)
+					}
+
+					return {
+						...d,
+						x: center.x + position.x,
+						y: center.y + position.y,
+						width: position.r * 1.6,
+						height: position.r * 1.6
+					};
+				});
 		}
 	}
 
@@ -243,64 +278,64 @@
 			text: texts.grid.festival,
 			action: () => category = 'festival'
 		},
-		// {
-		// 	text: texts.grid.home,
-		// 	action: () => category = 'home' 
-		// },
-		// {
-		// 	text: texts.grid.top,
-		// 	action: () => category = 'top'
-		// },
-		// {
-		// 	text: texts.grid.rewatch,
-		// 	action: () => category = 'rewatch'
-		// },
-		// {
-		// 	text: texts.grid.discovery,
-		// 	action: () => category = 'discovery'
-		// },
-		// {
-		// 	text: texts.grid.spielberg,
-		// 	action: () => category = 'spielberg'
-		// },
-		// {
-		// 	text: texts.grid.clubEtoile,
-		// 	action: () =>  {
-		// 		metric = 'grid';
-		// 		category = 'clubEtoile';
-		// 	}
-		// },
+		{
+			text: texts.grid.home,
+			action: () => category = 'home' 
+		},
+		{
+			text: texts.grid.top,
+			action: () => category = 'top'
+		},
+		{
+			text: texts.grid.rewatch,
+			action: () => category = 'rewatch'
+		},
+		{
+			text: texts.grid.discovery,
+			action: () => category = 'discovery'
+		},
+		{
+			text: texts.grid.spielberg,
+			action: () => category = 'spielberg'
+		},
+		{
+			text: texts.grid.clubEtoile,
+			action: () =>  {
+				metric = 'grid';
+				category = 'clubEtoile';
+			}
+		},
 		{
 			text: texts.watchDate,
 			action: () => metric = 'watch-date'
 		},
-		// {
-		// 	text: texts.releaseDate,
-		// 	action: () => metric = 'release-date'
-		// },
-		// {
-		// 	text: texts.medium,
-		// 	action: () => metric = 'medium'
-		// },
-		// {
-		// 	text: texts.originCountry,
-		// 	action: () => metric = 'origin-country'
-		// },
-		// {
-		// 	text: texts.genres.slice(0, 2),
-		// 	action: () => metric = 'genres'
-		// },
-		// {
-		// 	text: texts.genres[2],
-		// 	action: () => metric = 'genres'
-		// },
 		{
-			text: texts.womenDirectors[0],
-			action: () => metric = 'womenDirectors'
+			text: texts.releaseDate,
+			action: () => metric = 'release-date'
 		},
 		{
-			text: texts.womenDirectors.slice(1),
-			action: () => metric = 'womenDirectors'
+			text: texts.femaleDirectors[0],
+			action: () => metric = 'female-directors'
+		},
+		{
+			text: texts.femaleDirectors.slice(1),
+			action: () => metric = 'female-directors'
+		},
+		{
+			text: texts.medium,
+			action: () => metric = 'medium'
+		},
+		{
+			text: texts.originCountry,
+			action: () => metric = 'origin-country'
+		},
+		{
+			text: texts.genres[0],
+			action: () => metric = 'genres'
+		},
+		{
+			text: texts.genres[1],
+			action: () => metric = 'genres'
 		}
 	];
 
@@ -392,6 +427,7 @@
 						class='item' 
 						class:highlighted={isInCategory(d, category)}
 						class:hidden={isHidden(d, i)}
+						class:female-director={d.femaleDirector}
 						style='
 							left: {d.x}px;
 							top: {d.y}px;
@@ -426,6 +462,13 @@
 						{/if}
 						<p class='duration'>
 							{formatDuration(sum(dataByDate.get(hovered.date), (d) => d.runtime))}
+						</p>
+					{:else if metric === 'female-directors'}
+						<h3>{@html typografix(hovered.title)}</h3>
+						<h5>{hovered.country}, {hovered.year}</h5>
+						<p class='director'>
+							réal.
+							{@html formatList(hovered.directors)}
 						</p>
 					{:else if metric === 'medium'}
 						<h3>{@html typografix(hovered.title)}</h3>
@@ -553,7 +596,8 @@
 			background-color: $main-color;
 			transition:
 				border-radius $animation-duration $animation-timing-function,
-				opacity $animation-duration $animation-timing-function;
+				opacity $animation-duration $animation-timing-function
+				background-color $animation-duration $animation-timing-function;
 
 			&:hover {
 				z-index: 101;
@@ -612,16 +656,30 @@
 			}
 		}
 
-		&.watch-date, &.medium, &.origin-country {
+		&.watch-date, &.medium, &.origin-country, &.female-directors {
 			.item {
 				cursor: pointer;
 				transform: translate(-50%, -50%);
 			}
 		}
 
-		&.medium, &.origin-country {
+		&.release-date, &.medium, &.origin-country, &.female-directors {
+			.item {
+				&:hover  {
+					background-color: black !important;
+				}
+			}
+		}
+
+		&.medium, &.origin-country, &.female-directors {
 			.item {
 				border-radius: 50%;
+			}
+		}
+
+		&.female-directors {
+			.item:not(.female-director) {
+				background-color: lighten($main-color, 40%);
 			}
 		}
 
@@ -629,10 +687,6 @@
 			.item {
 				cursor: pointer;
 				transform: translateX(-50%);
-
-				&:hover  {
-					background-color: black;
-				}
 			}
 		}
 
@@ -757,7 +811,7 @@
 			}
 		}
 
-		.watched-on, .duration {
+		.watched-on, .duration, .director {
 			font-size: 0.9rem;
 			color: darkgrey;
 			margin-top: 0.25rem;

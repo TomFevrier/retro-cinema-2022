@@ -65,7 +65,7 @@ const data = [
 			"Comédie",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-01",
@@ -109,7 +109,7 @@ const data = [
 			"Science-Fiction",
 			"Musique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-04",
@@ -182,7 +182,7 @@ const data = [
 			"Thriller",
 			"Guerre"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-08",
@@ -271,7 +271,7 @@ const data = [
 			"Action",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-09",
@@ -366,7 +366,7 @@ const data = [
 			"Drame",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-12",
@@ -425,7 +425,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-16",
@@ -466,7 +466,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-16",
@@ -532,7 +532,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-18",
@@ -566,7 +566,7 @@ const data = [
 			"Fantastique",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-20",
@@ -620,7 +620,7 @@ const data = [
 			"Guerre",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-21",
@@ -656,7 +656,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-22",
@@ -707,7 +707,7 @@ const data = [
 			"Crime",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-23",
@@ -750,7 +750,7 @@ const data = [
 			"Horreur",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-28",
@@ -781,7 +781,7 @@ const data = [
 			"Thriller",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-28",
@@ -808,7 +808,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-28",
@@ -847,7 +847,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-28",
@@ -889,7 +889,7 @@ const data = [
 			"Thriller",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-28",
@@ -925,7 +925,7 @@ const data = [
 			"Horreur",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-29",
@@ -957,7 +957,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-29",
@@ -1026,7 +1026,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-29",
@@ -1053,7 +1053,7 @@ const data = [
 		genres: [
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-29",
@@ -1100,7 +1100,7 @@ const data = [
 			"Mystère",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-30",
@@ -1138,7 +1138,7 @@ const data = [
 			"Horreur",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-01-30",
@@ -1172,7 +1172,7 @@ const data = [
 			"Horreur",
 			"Fantastique"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-01-30",
@@ -1219,7 +1219,7 @@ const data = [
 			"Action",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-01",
@@ -1270,7 +1270,7 @@ const data = [
 			"Thriller",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-05",
@@ -1300,7 +1300,7 @@ const data = [
 			"Drame",
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-05",
@@ -1357,7 +1357,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-06",
@@ -1508,7 +1508,7 @@ const data = [
 			"Fantastique",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-06",
@@ -1642,7 +1642,7 @@ const data = [
 			"Fantastique",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-06",
@@ -1745,7 +1745,7 @@ const data = [
 			"Fantastique",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-08",
@@ -1800,7 +1800,7 @@ const data = [
 			"Science-Fiction",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-11",
@@ -1839,7 +1839,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-12",
@@ -1933,7 +1933,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-12",
@@ -2000,7 +2000,7 @@ const data = [
 			"Science-Fiction",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-18",
@@ -2082,7 +2082,7 @@ const data = [
 			"Science-Fiction",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-19",
@@ -2129,7 +2129,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-20",
@@ -2185,7 +2185,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-02-27",
@@ -2213,7 +2213,7 @@ const data = [
 			"Drame",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-04",
@@ -2249,7 +2249,7 @@ const data = [
 			"Thriller",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-05",
@@ -2316,7 +2316,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-06",
@@ -2356,7 +2356,7 @@ const data = [
 			"Romance",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-09",
@@ -2434,7 +2434,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-12",
@@ -2478,7 +2478,7 @@ const data = [
 			"Thriller",
 			"Romance"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-03-13",
@@ -2583,7 +2583,7 @@ const data = [
 			"Mystère",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-15",
@@ -2675,7 +2675,7 @@ const data = [
 			"Comédie",
 			"Fantastique"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-03-19",
@@ -2774,7 +2774,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-20",
@@ -2815,7 +2815,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-20",
@@ -2856,7 +2856,7 @@ const data = [
 			"Science-Fiction",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-24",
@@ -2911,7 +2911,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-25",
@@ -2966,7 +2966,7 @@ const data = [
 			"Drame",
 			"Guerre"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-27",
@@ -3014,7 +3014,7 @@ const data = [
 			"Crime",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-27",
@@ -3060,7 +3060,7 @@ const data = [
 			"Thriller",
 			"Crime"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-28",
@@ -3103,7 +3103,7 @@ const data = [
 			"Drame",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-03-31",
@@ -3162,7 +3162,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-02",
@@ -3224,7 +3224,7 @@ const data = [
 			"Horreur",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-03",
@@ -3279,7 +3279,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-04",
@@ -3337,7 +3337,7 @@ const data = [
 			"Mystère",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-05",
@@ -3395,7 +3395,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-06",
@@ -3448,7 +3448,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-08",
@@ -3541,7 +3541,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-09",
@@ -3577,7 +3577,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-04-12",
@@ -3624,7 +3624,7 @@ const data = [
 			"Action",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-19",
@@ -3654,7 +3654,7 @@ const data = [
 		genres: [
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-23",
@@ -3696,7 +3696,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-04-27",
@@ -3758,7 +3758,7 @@ const data = [
 			"Comédie",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-05",
@@ -3817,7 +3817,7 @@ const data = [
 			"Histoire",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-07",
@@ -3898,7 +3898,7 @@ const data = [
 			"Action",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-09",
@@ -3925,7 +3925,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-05-11",
@@ -3967,7 +3967,7 @@ const data = [
 			"Comédie",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-13",
@@ -4002,7 +4002,7 @@ const data = [
 			"Horreur",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-15",
@@ -4039,7 +4039,7 @@ const data = [
 			"Horreur",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-21",
@@ -4117,7 +4117,7 @@ const data = [
 			"Fantastique",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-22",
@@ -4161,7 +4161,7 @@ const data = [
 			"Comédie",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-22",
@@ -4197,7 +4197,7 @@ const data = [
 			"Thriller",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-24",
@@ -4246,7 +4246,7 @@ const data = [
 			"Drame",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-25",
@@ -4335,7 +4335,7 @@ const data = [
 			"Aventure",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-26",
@@ -4374,7 +4374,7 @@ const data = [
 			"Horreur",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-26",
@@ -4430,7 +4430,7 @@ const data = [
 			"Action",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-28",
@@ -4514,7 +4514,7 @@ const data = [
 			"Horreur",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-05-29",
@@ -4563,7 +4563,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-02",
@@ -4777,7 +4777,7 @@ const data = [
 			"Science-Fiction",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-04",
@@ -4826,7 +4826,7 @@ const data = [
 			"Comédie",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-06",
@@ -4890,7 +4890,7 @@ const data = [
 			"Action",
 			"Thriller"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-06-06",
@@ -4965,7 +4965,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-08",
@@ -5032,7 +5032,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-10",
@@ -5098,7 +5098,7 @@ const data = [
 			"Action",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-13",
@@ -5145,7 +5145,7 @@ const data = [
 			"Action",
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-17",
@@ -5185,7 +5185,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-18",
@@ -5270,7 +5270,7 @@ const data = [
 			"Horreur",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-18",
@@ -5341,7 +5341,7 @@ const data = [
 			"Action",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-18",
@@ -5423,7 +5423,7 @@ const data = [
 			"Action",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-21",
@@ -5453,7 +5453,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-22",
@@ -5519,7 +5519,7 @@ const data = [
 			"Comédie",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-23",
@@ -5576,7 +5576,7 @@ const data = [
 			"Thriller",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-27",
@@ -5646,7 +5646,7 @@ const data = [
 			"Action",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-28",
@@ -5677,7 +5677,7 @@ const data = [
 			"Horreur",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-28",
@@ -5742,7 +5742,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-06-30",
@@ -5802,7 +5802,7 @@ const data = [
 			"Animation",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-01",
@@ -5841,7 +5841,7 @@ const data = [
 			"Animation",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-02",
@@ -5884,7 +5884,7 @@ const data = [
 			"Fantastique",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-09",
@@ -5936,7 +5936,7 @@ const data = [
 			"Horreur",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-10",
@@ -5973,7 +5973,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-10",
@@ -6029,7 +6029,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-12",
@@ -6097,7 +6097,7 @@ const data = [
 			"Drame",
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-13",
@@ -6157,7 +6157,7 @@ const data = [
 			"Familial",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-16",
@@ -6198,7 +6198,7 @@ const data = [
 			"Crime",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-18",
@@ -6349,7 +6349,7 @@ const data = [
 			"Action",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-19",
@@ -6379,7 +6379,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-21",
@@ -6457,7 +6457,7 @@ const data = [
 			"Animation",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-21",
@@ -6491,7 +6491,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-22",
@@ -6561,7 +6561,7 @@ const data = [
 			"Drame",
 			"Guerre"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-23",
@@ -6631,7 +6631,7 @@ const data = [
 			"Thriller",
 			"Crime"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-24",
@@ -6678,7 +6678,7 @@ const data = [
 			"Familial",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-25",
@@ -6737,7 +6737,7 @@ const data = [
 			"Action",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-25",
@@ -6802,7 +6802,7 @@ const data = [
 			"Action",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-26",
@@ -6869,7 +6869,7 @@ const data = [
 			"Thriller",
 			"Crime"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-26",
@@ -6907,7 +6907,7 @@ const data = [
 		genres: [
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-27",
@@ -6973,7 +6973,7 @@ const data = [
 			"Science-Fiction",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-27",
@@ -7011,7 +7011,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-27",
@@ -7069,7 +7069,7 @@ const data = [
 			"Science-Fiction",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-28",
@@ -7103,7 +7103,7 @@ const data = [
 			"Romance",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-07-28",
@@ -7157,7 +7157,7 @@ const data = [
 			"Drame",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-04",
@@ -7220,7 +7220,7 @@ const data = [
 			"Familial",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-16",
@@ -7279,7 +7279,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-17",
@@ -7309,7 +7309,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-20",
@@ -7361,7 +7361,7 @@ const data = [
 		genres: [
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-21",
@@ -7417,7 +7417,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-21",
@@ -7529,7 +7529,7 @@ const data = [
 			"Comédie",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-22",
@@ -7597,7 +7597,7 @@ const data = [
 			"Familial",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-23",
@@ -7637,7 +7637,7 @@ const data = [
 			"Thriller",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-24",
@@ -7690,7 +7690,7 @@ const data = [
 			"Action",
 			"Crime"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-08-25",
@@ -7727,7 +7727,7 @@ const data = [
 			"Thriller",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-26",
@@ -7757,7 +7757,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-27",
@@ -7797,7 +7797,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-08-28",
@@ -7834,7 +7834,7 @@ const data = [
 			"Drame",
 			"Aventure"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-08-28",
@@ -7872,7 +7872,7 @@ const data = [
 			"Horreur",
 			"Thriller"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-08-28",
@@ -7977,7 +7977,7 @@ const data = [
 			"Comédie",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-29",
@@ -8055,7 +8055,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-30",
@@ -8105,7 +8105,7 @@ const data = [
 			"Comédie",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-08-31",
@@ -8137,7 +8137,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-04",
@@ -8166,7 +8166,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-05",
@@ -8205,7 +8205,7 @@ const data = [
 			"Fantastique",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-06",
@@ -8270,7 +8270,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-07",
@@ -8310,7 +8310,7 @@ const data = [
 			"Thriller",
 			"Téléfilm"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-11",
@@ -8371,7 +8371,7 @@ const data = [
 			"Crime",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-12",
@@ -8404,7 +8404,7 @@ const data = [
 			"Drame",
 			"Fantastique"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-09-13",
@@ -8469,7 +8469,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-14",
@@ -8514,7 +8514,7 @@ const data = [
 			"Comédie",
 			"Animation"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-09-16",
@@ -8569,7 +8569,7 @@ const data = [
 			"Histoire",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-17",
@@ -8628,7 +8628,7 @@ const data = [
 			"Familial",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-17",
@@ -8668,7 +8668,7 @@ const data = [
 			"Aventure",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-18",
@@ -8706,7 +8706,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-09-19",
@@ -8761,7 +8761,7 @@ const data = [
 			"Thriller",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-21",
@@ -8824,7 +8824,7 @@ const data = [
 			"Fantastique",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-23",
@@ -8861,7 +8861,7 @@ const data = [
 			"Action",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-26",
@@ -8925,7 +8925,7 @@ const data = [
 			"Mystère",
 			"Science-Fiction"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-09-28",
@@ -8982,7 +8982,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-29",
@@ -9064,7 +9064,7 @@ const data = [
 			"Science-Fiction",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-09-30",
@@ -9103,7 +9103,7 @@ const data = [
 			"Comédie",
 			"Musique"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-10-01",
@@ -9183,7 +9183,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-02",
@@ -9227,7 +9227,7 @@ const data = [
 			"Drame",
 			"Histoire"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-10-03",
@@ -9276,7 +9276,7 @@ const data = [
 			"Thriller",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-04",
@@ -9341,7 +9341,7 @@ const data = [
 			"Drame",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-07",
@@ -9374,7 +9374,7 @@ const data = [
 			"Thriller",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-09",
@@ -9483,7 +9483,7 @@ const data = [
 			"Comédie",
 			"Guerre"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-10",
@@ -9539,7 +9539,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-12",
@@ -9589,7 +9589,7 @@ const data = [
 			"Comédie",
 			"Crime"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-13",
@@ -9624,7 +9624,7 @@ const data = [
 			"Romance",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-13",
@@ -9664,7 +9664,7 @@ const data = [
 			"Horreur",
 			"Téléfilm"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-15",
@@ -9692,7 +9692,7 @@ const data = [
 			"Animation",
 			"Familial"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-10-16",
@@ -9740,7 +9740,7 @@ const data = [
 			"Animation",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-17",
@@ -9782,7 +9782,7 @@ const data = [
 			"Comédie",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-18",
@@ -9855,7 +9855,7 @@ const data = [
 			"Aventure",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-19",
@@ -9892,7 +9892,7 @@ const data = [
 			"Drame",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-20",
@@ -9924,7 +9924,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-23",
@@ -9965,7 +9965,7 @@ const data = [
 			"Crime",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-24",
@@ -10026,7 +10026,7 @@ const data = [
 			"Comédie",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-25",
@@ -10074,7 +10074,7 @@ const data = [
 			"Drame",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-29",
@@ -10139,7 +10139,7 @@ const data = [
 		genres: [
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-29",
@@ -10184,7 +10184,7 @@ const data = [
 			"Horreur",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-30",
@@ -10250,7 +10250,7 @@ const data = [
 			"Thriller",
 			"Drame"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-10-30",
@@ -10348,7 +10348,7 @@ const data = [
 			"Horreur",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-31",
@@ -10399,7 +10399,7 @@ const data = [
 			"Fantastique",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-10-31",
@@ -10430,7 +10430,7 @@ const data = [
 			"Horreur",
 			"Comédie"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-11-01",
@@ -10505,7 +10505,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-01",
@@ -10548,7 +10548,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-02",
@@ -10577,7 +10577,7 @@ const data = [
 		genres: [
 			"Animation"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-02",
@@ -10636,7 +10636,7 @@ const data = [
 			"Romance",
 			"Crime"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-02",
@@ -10673,7 +10673,7 @@ const data = [
 			"Mystère",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-03",
@@ -10750,7 +10750,7 @@ const data = [
 			"Fantastique",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-04",
@@ -10833,7 +10833,7 @@ const data = [
 			"Mystère",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-04",
@@ -10875,7 +10875,7 @@ const data = [
 			"Thriller",
 			"Horreur"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-11-06",
@@ -10923,7 +10923,7 @@ const data = [
 			"Romance",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-07",
@@ -11029,7 +11029,7 @@ const data = [
 			"Thriller",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-08",
@@ -11060,7 +11060,7 @@ const data = [
 			"Drame",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-08",
@@ -11092,7 +11092,7 @@ const data = [
 		genres: [
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-08",
@@ -11197,7 +11197,7 @@ const data = [
 			"Aventure",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-09",
@@ -11227,7 +11227,7 @@ const data = [
 			"Drame",
 			"Guerre"
 		],
-		womenDirector: true
+		femaleDirector: true
 	},
 	{
 		date: "2022-11-09",
@@ -11257,7 +11257,7 @@ const data = [
 			"Romance",
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-09",
@@ -11335,7 +11335,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-10",
@@ -11440,7 +11440,7 @@ const data = [
 			"Drame",
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-10",
@@ -11481,7 +11481,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-10",
@@ -11517,7 +11517,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-16",
@@ -11547,7 +11547,7 @@ const data = [
 			"Drame",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-17",
@@ -11613,7 +11613,7 @@ const data = [
 			"Histoire",
 			"Guerre"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-18",
@@ -11673,7 +11673,7 @@ const data = [
 			"Horreur",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-19",
@@ -11707,7 +11707,7 @@ const data = [
 			"Horreur",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-22",
@@ -11812,7 +11812,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-23",
@@ -11857,7 +11857,7 @@ const data = [
 			"Histoire",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-25",
@@ -11904,7 +11904,7 @@ const data = [
 			"Drame",
 			"Horreur"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-27",
@@ -11956,7 +11956,7 @@ const data = [
 			"Comédie",
 			"Romance"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-28",
@@ -12014,7 +12014,7 @@ const data = [
 		genres: [
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-30",
@@ -12069,7 +12069,7 @@ const data = [
 			"Comédie",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-11-30",
@@ -12155,7 +12155,7 @@ const data = [
 			"Aventure",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-02",
@@ -12195,7 +12195,7 @@ const data = [
 			"Science-Fiction",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-04",
@@ -12254,7 +12254,7 @@ const data = [
 			"Romance",
 			"Drame"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-04",
@@ -12336,7 +12336,7 @@ const data = [
 		genres: [
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-08",
@@ -12395,7 +12395,7 @@ const data = [
 			"Comédie",
 			"Familial"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-09",
@@ -12446,7 +12446,7 @@ const data = [
 			"Crime",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-11",
@@ -12494,7 +12494,7 @@ const data = [
 			"Familial",
 			"Fantastique"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-13",
@@ -12531,7 +12531,7 @@ const data = [
 		genres: [
 			"Histoire"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-14",
@@ -12613,7 +12613,7 @@ const data = [
 			"Action",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-17",
@@ -12670,7 +12670,7 @@ const data = [
 			"Fantastique",
 			"Action"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-18",
@@ -12721,7 +12721,7 @@ const data = [
 			"Action",
 			"Aventure"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-19",
@@ -12786,7 +12786,7 @@ const data = [
 			"Aventure",
 			"Science-Fiction"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-20",
@@ -12843,7 +12843,7 @@ const data = [
 			"Crime",
 			"Mystère"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-30",
@@ -12880,7 +12880,7 @@ const data = [
 			"Science-Fiction",
 			"Thriller"
 		],
-		womenDirector: false
+		femaleDirector: false
 	},
 	{
 		date: "2022-12-30",
@@ -12942,7 +12942,7 @@ const data = [
 			"Thriller",
 			"Comédie"
 		],
-		womenDirector: false
+		femaleDirector: false
 	}
 ];
 

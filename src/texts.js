@@ -5,7 +5,7 @@ const texts = {
 			`Cela représente *{{ NB_MOVIES }} longs-métrages*, sortis entre {{ OLDEST_RELEASE }} et 2022 et venant des quatre coins du monde : des États-Unis à Taïwan, en passant par la France, la Lituanie et le Japon.`
 		],
 		theater: [
-			`Pour cette première année depuis 2019 sans fermeture des cinémas, je suis allé voir *{{ NB_MOVIES_THEATER }} films à l'affiche en salle*... certains même plusieurs fois, comme *Everything Everywhere All at Once* (4 visionnages !).`,
+			`Pour cette première année depuis 2019 sans fermeture des cinémas, je suis allé voir *{{ NB_MOVIES_THEATER }} films à l'affiche en salles*... certains même plusieurs fois, comme *Everything Everywhere All at Once* (4 visionnages dont 3 en salles !).`,
 			`Deux fois plus [qu'en 2021](https://tomfevrier.io/retro-cinema-2021/), toujours grâce à mon CinéPass Pathé.`
 		],
 		festival: [
@@ -16,7 +16,7 @@ const texts = {
 		top: `Parmi tous ces films sortis en 2022, *voici mes 10 préférés*. Retrouvez le classement et mon avis rapide sur chacun d'entre eux tout en bas de cette page.`,
 		rewatch: [
 			`*J’ai revu beaucoup moins de films* l'année passée [qu'en 2021](https://tomfevrier.io/retro-cinema-2021/), seulement *{{ NB_MOVIES_REWATCH }}*.`,
-			`À noter : le traditionnel marathon annuel du *Seigneur des Anneaux* le 6 février, mais aussi la *trilogie Cornetto* au Club de l'Étoile le 18 juin, et *Avatar* lors de sa ressortie en salle au mois de septembre.`
+			`À noter : le traditionnel marathon annuel du *Seigneur des Anneaux* le 6 février, mais aussi la *trilogie Cornetto* au Club de l'Étoile le 18 juin, et *Avatar* lors de sa ressortie en salles au mois de septembre.`
 		],
 		discovery: [
 			`2022 a encore été une année de découverte, avec *{{ NB_MOVIES_DISCOVERY }} films que je n'avais jamais vus auparavant*.`,
@@ -36,7 +36,13 @@ const texts = {
 	],
 	releaseDate: [
 		`Encore une fois, plus de 80 % des films que j'ai regardés l'année dernière sont sortis après l'an 2000, et *plus de 60 % en 2021 ou 2022*.`,
-		`Le film le plus ancien ? *La Vie future*, réponse méconnue au _Metropolis_ de Fritz Lang par H. G. Wells (auteur de _La Guerre des mondes_ et de _La Machine à explorer le temps_).`
+		`Le film le plus ancien ? *La Vie future* (1936), réponse méconnue au _Metropolis_ de Fritz Lang par H. G. Wells (auteur de _La Guerre des mondes_ et de _La Machine à explorer le temps_).`
+	],
+	femaleDirectors: [
+		// En 2021 : 18 films réalisés ou coréalisés par des femmes (16 sans coréalisateur)
+		`Nouveauté de cette année, je me suis intéressé au genre des cinéastes. Le constat est sans appel : *seuls {{ NB_FEMALE_DIRECTORS }} films vus cette année étaient réalisés ou coréalisés par des femmes*, soit moins d'un film sur dix. En 2021, cette part était à peu près similaire (18 sur 176, soit 10,2 %).`,
+		`Selon [un rapport du CNC de juin 2022](https://www.cnc.fr/documents/36995/1617915/Synth%C3%A8se+n%C2%B022+-+Les+films+d%E2%80%99initiative+fran%C3%A7aise+r%C3%A9alis%C3%A9s+par+des+femmes+en+2021.jpg/463de9fa-789b-e4e7-3dd7-6c237685c484?t=1655996607604), *moins de 30 % des films de fiction produits en 2021 avaient été réalisés ou coréalisés par des femmes*, une proportion en augmentation mais qui reste faible.`,
+		`Sans compter que les réalisatrices sont en général bien moins dotées que leurs homologues masculins : *2,6 millions d'euros de budget en moyenne, contre 5 millions pour les réalisateurs*... ce qui peut expliquer la moindre visibilité de leurs films.`
 	],
 	medium: [
 		`La salle de cinéma reste pour moi l'endroit privilégié pour découvrir un film : en 2022, j'ai passé plus de *12 jours dans les salles obscures !*`,
@@ -47,16 +53,8 @@ const texts = {
 		`Toujours 20 % de films français, mais moins de films américains que [l'année dernière](https://tomfevrier.io/retro-cinema-2021/) et plus de films asiatiques (Japon et Corée du Sud, notamment).`
 	],
 	genres: [
-		// TODO
-		`Outre les genres courants (comédie, drame, action, aventure), les films que j'ai vus cette année trahissent mes goûts en terme de cinéma.`,
-		`On trouve ainsi *un grand nombre de longs-métrages de genre* (horreur, thriller, science-fiction & fantastique), dont beaucoup de films français de l'année : *Le dernier voyage*, *La Nuée*, *Teddy*, *Oxygène*, *Titane*, etc.`,
-		`On recense également un certain nombre de *comédies musicales* : *Annette*, les deux adaptations de *West Side Story*, mais aussi *D'où l'on vient*, *tick, tick... Boom!* ou *Encanto*. Décidément, 2021 est l'année de ma rencontre avec Lin-Manuel Miranda !`
-	],
-	womenDirectors: [
-		// En 2021 : 18 films réalisés ou coréalisés par des femmes (16 sans coréalisateur)
-		`Nouveauté de cette année, je me suis intéressé au genre des cinéastes. Le constat est sans appel : *seuls {{ NB_WOMEN_DIRECTORS }} films vus cette année étaient réalisés ou coréalisés par des femmes*, soit moins de 10 % du total. En 2021, cette part était à peu près similaire (18 sur 176, soit 10,2 %).`,
-		`Selon [un rapport du CNC de juin 2022](https://www.cnc.fr/documents/36995/1617915/Synth%C3%A8se+n%C2%B022+-+Les+films+d%E2%80%99initiative+fran%C3%A7aise+r%C3%A9alis%C3%A9s+par+des+femmes+en+2021.jpg/463de9fa-789b-e4e7-3dd7-6c237685c484?t=1655996607604), *moins de 30 % des films de fiction produits en 2021 avaient été réalisés ou coréalisés par des femmes*, une proportion en augmentation mais qui reste faible.`,
-		`Sans compter que les réalisatrices sont en général bien moins dotées que leurs homologues masculins : *2,6 millions d'euros de budget en moyenne, contre 5 millions pour les réalisateurs*... ce qui peut expliquer la moindre visibilité de leurs films.`
+		`Les films que j'ai vus cette année trahissent toujours autant mes goûts en matière de cinéma. Outre les genres courants (comédie, drame, action, aventure), on retrouve toujours plus de longs-métrages *de genre (thriller, horreur, science-fiction & fantastique)*, notamment grâce au festival de Gérardmer.`,
+		`Mon année 2021 avait été marquée par les comédies musicales ; 2022 a été l'année de l'animation, avec plusieurs petits bijoux en stop motion : *Junk Head*, le nouveau Henry Selick *Wendell & Wild*, et surtout le *Pinocchio* de Guillermo del Toro.`
 	],
 	topMovies: [
 		{
@@ -147,13 +145,12 @@ const texts = {
 			title: 'Sources des données<br />et des images',
 			content: '[TMDB](https://www.themoviedb.org)'
 		},
-		// {
-		// 	content: [
-		// 		`Merci aux *cinémas Pathé-Gaumont* : grâce à mon Cinépass, j'ai pu découvrir plus de films en salle cette année que les cinq années précédentes !`,
-		// 		`Merci au *Club de l'Étoile*, le meilleur cinéma indépendant de Paris, et merci à *Victor Bonnefoy* pour tous ces "Unknown Movies".`,
-		// 		`Et parce que le cinéma est un art qui se partage, merci à *toutes celles et ceux qui m'ont accompagné en salle* cette année : mes parents, Axel, Youssr, Vincent, Raphaëlle, Julien, Pauline, Damien et bien entendu Théo, mon fidèle acolyte cinéphile.`
-		// 	]
-		// }
+		{
+			content: [
+				`Merci aux *cinémas Pathé* et au *Club de l'Étoile*`,
+				`Et parce que le cinéma est un art qui se partage, merci à *toutes celles et ceux qui m'ont accompagné en salle* cette année : mes parents, Léo, Youssr, Raphaëlle, Julien, Pauline, Damien et enfin Théo, mon fidèle acolyte cinéphile avec qui j'ai passé plus de 24h dans une salle de cinéma en 2022.`
+			]
+		}
 	]
 };
 

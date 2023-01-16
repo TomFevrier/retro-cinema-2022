@@ -1,32 +1,6 @@
 <script>
-	// import { csv } from 'd3-fetch';
-	// import { autoType } from 'd3-dsv';
-	// import { onMount } from 'svelte';
-
-	// onMount(async () => {
-	// 	const data = await csv('movies.csv', autoType);
-		
-	// 	console.log(data.map((d) => ({
-	// 		date: d.date.toISOString().split('T')[0],
-	// 		imdbId: d.imdbId,
-	// 		title: d.title,
-	// 		year: d.year,
-	// 		runtime: d.runtime,
-	// 		country: d.country,
-	// 		...(d.directors.includes(',')
-	// 			? { directors: d.directors.split(',') }
-	// 			: { director: d.directors }
-	// 		),
-	// 		actors: d.actors.split(','),
-	// 		genres: d.genres.split(','),
-	// 		medium: d.medium,
-	// 		rewatch: d.rewatch === 'X',
-	// 		womenDirector: d.womenDirector === 'X',
-	// 		comment: d.comment
-	// 	})))
-	// });
-
 	import { uniqBy } from 'lodash-es';
+	import { shuffle } from 'd3-array';
 
 	import { LoadingScreen } from './components';
 	import { ScrollyStory, TopPeople, TopMovies, Masthead } from './sections';
@@ -45,7 +19,7 @@
 	$: posters && setTimeout(() => loaded = true, 500);
 
 	// console.log(uniqBy(data, 'imdbId').filter((d) => d.year >= 2021).length / uniqBy(data, 'imdbId').length)
-	console.log(uniqBy(data, 'imdbId').filter((d) => d.womenDirector), uniqBy(data, 'imdbId').length)
+	console.log(uniqBy(data, 'imdbId').filter((d) => d.femaleDirector), uniqBy(data, 'imdbId').length)
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -54,7 +28,7 @@
 	<header class='title-block'>
 		{#if posters}
 			<div class='posters'>
-				{#each uniqBy(data, 'imdbId').filter((d) => d.medium.includes('Cinéma') && d.year === 2022).shuffle().slice(0, 60) as movie}
+				{#each shuffle(uniqBy(data, 'imdbId').filter((d) => d.medium.includes('Cinéma') && d.year === 2022)).slice(0, 60) as movie}
 					<div class='poster'>
 						<img src={posters.get(movie.imdbId || movie.title).src} alt={movie.title} />
 					</div>
@@ -79,7 +53,7 @@
 		<ScrollyStory {data} {posters} bind:loaded />
 	{/if}
 	<TopPeople data={uniqBy(data, 'imdbId')} {posters} />
-	<TopMovies data={data.unique('imdbId')} />
+	<TopMovies data={uniqBy(data, 'imdbId')} />
 	<Masthead />
 </main>
 <!-- <div style='position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: black; transform: translateX(-50%);'></div>

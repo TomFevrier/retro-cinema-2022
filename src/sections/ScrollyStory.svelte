@@ -629,10 +629,12 @@
 				width: 100%;
 				opacity: 0.2 !important;
 				transition: opacity $animation-duration $animation-timing-function;
+				pointer-events: none;
 
 				&.highlighted {
-					cursor: pointer;
 					opacity: 1 !important;
+					pointer-events: all;
+					cursor: pointer;
 					transition:
 						transform 0.2s ease-in-out,
 						opacity $animation-duration $animation-timing-function;

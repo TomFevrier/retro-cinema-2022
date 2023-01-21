@@ -32,6 +32,13 @@
 					{/each}
 				</div>
 			</div>
+			{#if movie.more}
+				<div class='more'>
+					{#each (Array.isArray(movie.more) ? movie.more : [movie.more]) as p}
+						<p>{@html typografix(p)}</p>
+					{/each}
+				</div>
+			{/if}
 		</div>
 	{/each}
 </TopContainer>
@@ -45,6 +52,7 @@
 	.card {
 		display: flex;
 		align-items: flex-end;
+		flex-wrap: wrap;
 		width: 100%;
 		margin: 1rem 0;
 
@@ -82,7 +90,7 @@
 				span {
 					// display: table;
 					font: italic 1rem 'Lora', serif;
-					color: darkgrey;
+					color: darkgray;
 					width: fit-content;
 					flex-grow: 0;
 				}
@@ -113,6 +121,15 @@
 			}
 		}
 
+		.more {
+			width: 100%;
+			margin-top: 0.25rem;
+
+			p {
+				max-width: 600px;
+			}
+		}
+
 		@include lg {
 			flex-direction: column;
 
@@ -120,6 +137,14 @@
 				margin-left: 0;
 				margin-top: 0.5rem;
 				// flex-direction: column-reverse;
+			}
+
+			.more {
+				margin-top: -0.25rem;
+				
+				p {
+					max-width: none !important;
+				}
 			}
 		}
 	}

@@ -4,19 +4,15 @@
 	export let data;
 	export let posters;
 
-	const directors = [...new Set(data.reduce((acc, d) => [...acc, ...(d.directors ? d.directors : [d.director])], []))]
-		.reduce((map, director) => {
-			return map.set(director, data.filter((d) => (d.directors ? d.directors : [d.director]).includes(director)));
-		}, new Map());
-	const topDirectors = [...directors.entries()].sort((a, b) => b[1].length - a[1].length);
+	const topDirectors = ['Steven Spielberg', 'Wes Craven', 'Edgar Wright', 'Sion Sono', 'Baz Luhrmann', 'Hideo Nakata']
+		.map((director) => {
+			return [director, data.filter((d) => d.directors.includes(director))];
+		});
 
-	const actors = [...new Set(data.reduce((acc, d) => [...acc, ...d.actors], []))]
-		.reduce((map, actor) => {
-			return map.set(actor, data.filter((d) => d.actors.includes(actor)));
-		}, new Map());
-	const topActors = [...actors.entries()].sort((a, b) => b[1].length - a[1].length);
-
-	console.log(topDirectors, topActors)
+	const topActors = ['Cate Blanchett', 'Ted Grossman', 'John Rhys-Davies', 'Andy Serkis', 'Keegan-Michael Key', 'Chris Pratt']
+		.map((actor) => {
+			return [actor, data.filter((d) => d.actors.includes(actor))];
+		});
 </script>
 
 {#if posters}
@@ -25,7 +21,7 @@
 			<h2>Top cinéastes de 2022</h2>
 			{#each topDirectors.slice(0, 10) as [director, movies]}
 				<div class='card'>
-					<img class='portrait' src='people/{director}.jpg' />
+					<img class='portrait' src='people/{director.replace(/\s/g, '-')}.jpg' />
 					<div class='content'>
 						<h3>{director}</h3>
 						<div class='movies'>
@@ -45,7 +41,7 @@
 			<h2>Top interprètes de 2022</h2>
 			{#each topActors.slice(0, 10) as [actor, movies]}
 				<div class='card'>
-					<img class='portrait' src='people/{actor}.jpg' />
+					<img class='portrait' src='people/{actor.replace(/\s/g, '-')}.jpg' />
 					<div class='content'>
 						<h3>{actor}</h3>
 						<div class='movies'>
@@ -97,9 +93,14 @@
 			.content {
 				margin-left: 1rem;
 
+				h3 {
+					margin-top: 0;
+				}
+
 				.movies {
 					display: flex;
 					flex-wrap: wrap;
+					max-width: 20rem;
 
 					.poster {
 						width: 2.5rem;

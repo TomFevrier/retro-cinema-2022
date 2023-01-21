@@ -250,7 +250,7 @@ const getTickFormat = (tickTemplate) => {
 const isInCategory = (d, category) => {
 	switch(category) {
 		case 'theater':
-			return d.medium.includes('Cinéma') && d.year === 2022;
+			return d.medium.includes('Cinéma') && (d.year >= 2021 || d.directors.includes('Tetsuya Mariko'));
 		case 'festival':
 			return d.comment && d.comment.includes('Festival');
 		case 'home':

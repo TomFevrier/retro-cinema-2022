@@ -5,12 +5,13 @@ const texts = {
 			`Cela représente *{{ NB_MOVIES }} longs-métrages*, sortis entre {{ OLDEST_RELEASE }} et 2022 et venant des quatre coins du monde : des États-Unis à Taïwan, en passant par la France, la Lituanie et le Japon.`
 		],
 		theater: [
-			`Pour cette première année depuis 2019 sans fermeture des cinémas, je suis allé voir *{{ NB_MOVIES_THEATER }} films à l'affiche en salles*... certains même plusieurs fois, comme *Everything Everywhere All at Once* (4 visionnages dont 3 en salles !).`,
-			`Deux fois plus [qu'en 2021](https://tomfevrier.io/retro-cinema-2021/), toujours grâce à mon CinéPass Pathé.`
+			`Pour cette première année depuis 2019 sans fermeture des cinémas, je suis allé voir *{{ NB_MOVIES_THEATER }} films à l'affiche en salles*... certains même plusieurs fois, comme *Everything Everywhere All at Once* (4 visionnages dont 3 sur grand écran !).`,
+			`Deux fois plus [qu'en 2021](https://tomfevrier.io/retro-cinema-2021/), toujours grâce à un CinéPass Pathé très vite rentabilisé.`
 		],
 		festival: [
 			`J'ai eu la chance de découvrir plusieurs de ces films au cours de festivals.`,
-			`Celui de *Gérardmer* fin janvier, avec 12 films en moins de 3 jours (j'ai testé pour vous, c'est beaucoup trop). Et l'*Arras Film Festival* du 8 au 10 novembre.`
+			`Celui de *Gérardmer* fin janvier, avec 12 films en moins de 3 jours (j'ai testé pour vous, c'est beaucoup trop).`,
+			`Et l'*Arras Film Festival* du 8 au 10 novembre.`
 		],
 		home: `J'ai également découvert *{{ NB_MOVIES_HOME }} films sortis l'année dernière chez moi* (sorties VOD ou rattrapages). Principalement sur Netflix, mais aussi par des moyens pas vraiment légaux.`,
 		top: `Parmi tous ces films sortis en 2022, *voici mes 10 préférés*. Retrouvez le classement et mon avis rapide sur chacun d'entre eux tout en bas de cette page.`,
@@ -20,7 +21,7 @@ const texts = {
 		],
 		discovery: [
 			`2022 a encore été une année de découverte, avec *{{ NB_MOVIES_DISCOVERY }} films que je n'avais jamais vus auparavant*.`,
-			`Et parmi eux, quelques classiques (*Alien*, *La Mouche*, *Le Pacte des loups*, *L'Exorciste*), mais aussi quelques coups de cœur personnels (*Joint Security Area*, *Le Roi de cœur*, *Coherence*, *Swiss Army Man*...).`
+			`Et parmi eux, quelques classiques (*Alien*, *La Mouche*, *L'Exorciste*, *Elephant Man*), mais aussi quelques coups de cœur personnels (*Le Pacte des loups*, *Joint Security Area*, *Le Roi de cœur*, *Coherence*, *Swiss Army Man*...).`
 		],
 		spielberg: [
 			`Parmi ces revisionnages et ces découvertes, *{{ NB_MOVIES_SPIELBERG }} films de Steven Spielberg*, dont je tente de rattraper l'ensemble de la filmographie (presque) dans l'ordre, d'ici la sortie de *The Fabelmans* le 22 février prochain.`
@@ -35,7 +36,7 @@ const texts = {
 		`Outre mon week-end cinéphile à Gérardmer et les marathons Le Seigneur des Anneaux et Edgar Wright, il m'est fréquemment d'aller voir 2 ou 3 films au cinéma dans la même journée.`
 	],
 	releaseDate: [
-		`Encore une fois, plus de 80 % des films que j'ai regardés l'année dernière sont sortis après l'an 2000, et *plus de 60 % en 2021 ou 2022*.`,
+		`[Encore une fois](https://tomfevrier.io/retro-cinema-2021/), plus de 80 % des longs-métrages que j'ai regardés l'année dernière sont sortis après l'an 2000, et *plus de 60 % en 2021 ou 2022*.`,
 		`Le film le plus ancien ? *La Vie future* (1936), réponse méconnue au _Metropolis_ de Fritz Lang par H. G. Wells (auteur de _La Guerre des mondes_ et de _La Machine à explorer le temps_).`
 	],
 	femaleDirectors: [
@@ -129,7 +130,9 @@ const texts = {
 			quote: `“Here, all we get are a few specks of time where any of this actually makes any sense.”`,
 			review: [
 				'Le film de tous les superlatifs : le plus fou, le plus créatif, le plus drôle et le plus émouvant que j’aie jamais vu.',
-				'Par leur patchwork syncrétique de références, leur constante inventivité visuelle et la candeur de leur discours, les Daniels s’inscrivent comme dignes héritiers des sœurs Wachowski et leur offrent le plus vibrant des hommages.',
+				'Par leur patchwork syncrétique de références, leur constante inventivité visuelle et la candeur de leur discours, les Daniels s’inscrivent comme dignes héritiers des sœurs Wachowski et leur offrent le plus vibrant des hommages.'
+			],
+			more: [
 				'Mais au-delà de l’originalité folle de ce multivers, qui n’a jamais été aussi bien traité au cinéma, *Everything Everywhere All at Once* touche en plein cœur en resserrant ses enjeux autour d’un sujet universel : une famille dysfonctionnelle qui doit réapprendre à communiquer.',
 				'C’est aussi une œuvre, tout comme Inside de Bo Burnham (mon [top 3 de 2021](https://tomfevrier.io/retro-cinema-2021/)), qui a parfaitement compris son époque et a su capter cette fatigue informationnelle, cette perte de sens et ce sentiment d’impuissance face à l’absurdité du monde que nous sommes de plus en plus nombreux⋅ses à connaître.',
 				'Pour tout connaître sur les inspirations des Daniels et les multiples références et symboles qui parsèment le long-métrage, [c’est par ici️ !](https://twitter.com/TomFevrier/status/1566458468248289286)'
@@ -147,7 +150,7 @@ const texts = {
 		},
 		{
 			content: [
-				`Merci aux *cinémas Pathé* et au *Club de l'Étoile*`,
+				`Merci aux *cinémas Pathé* et au *Club de l'Étoile*.`,
 				`Et parce que le cinéma est un art qui se partage, merci à *toutes celles et ceux qui m'ont accompagné en salle* cette année : mes parents, Léo, Youssr, Raphaëlle, Julien, Pauline, Damien et enfin Théo, mon fidèle acolyte cinéphile avec qui j'ai passé plus de 24h dans une salle de cinéma en 2022.`
 			]
 		}

@@ -2096,7 +2096,7 @@ const data = [
 		comment: "",
 		year: 2022,
 		runtime: 127,
-		country: "Royaume-Uni",
+		country: "États-Unis",
 		directors: [
 			"Kenneth Branagh"
 		],
@@ -2261,7 +2261,7 @@ const data = [
 		note: "***",
 		VF: true,
 		comment: "",
-		year: 2021,
+		year: 2022,
 		runtime: 99,
 		country: "Royaume-Uni",
 		directors: [
@@ -2448,7 +2448,7 @@ const data = [
 		comment: "",
 		year: 2022,
 		runtime: 114,
-		country: "Royaume-Uni",
+		country: "États-Unis",
 		directors: [
 			"Mimi Cave"
 		],
@@ -3981,7 +3981,7 @@ const data = [
 		comment: "",
 		year: 1986,
 		runtime: 96,
-		country: "Canada",
+		country: "États-Unis",
 		directors: [
 			"David Cronenberg"
 		],
@@ -4175,7 +4175,7 @@ const data = [
 		comment: "",
 		year: 2013,
 		runtime: 89,
-		country: "Royaume-Uni",
+		country: "États-Unis",
 		directors: [
 			"James Ward Byrkit"
 		],
@@ -10937,7 +10937,7 @@ const data = [
 		comment: "",
 		year: 2019,
 		runtime: 122,
-		country: "Canada",
+		country: "États-Unis",
 		directors: [
 			"Todd Phillips"
 		],

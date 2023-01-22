@@ -17,9 +17,6 @@
 
 	let loaded = false;
 	$: posters && setTimeout(() => loaded = true, 500);
-
-	// console.log(uniqBy(data, 'imdbId').filter((d) => d.year >= 2021).length / uniqBy(data, 'imdbId').length)
-	console.log(uniqBy(data, 'imdbId').filter((d) => d.femaleDirector), uniqBy(data, 'imdbId').length)
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -56,8 +53,6 @@
 	<TopMovies data={uniqBy(data, 'imdbId')} />
 	<Masthead />
 </main>
-<!-- <div style='position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: black; transform: translateX(-50%);'></div>
-<div style='position: absolute; top: 50%; left: 0; height: 2px; width: 100%; background: black; transform: translateY(-50%);'></div> -->
 
 <style lang='scss'>
 	:global(a) {

@@ -91,56 +91,6 @@ const preloadPosters = async (data) => {
 }
 
 
-// const getStats = (data) => {
-// 	const dedupedData = data.filter((d, i) => data.findIndex((e) => d.imdbId === e.imdbId) === i);
-
-// 	const favoriteDirectors = Object.entries(dedupedData.reduce((acc, d) => {
-// 		(d.director ? [d.director] : d.directors).forEach((director) => {
-// 			if (director in acc) {
-// 				acc[director].push(d);
-// 			}
-// 			else {
-// 				acc[director] = [d];
-// 			}
-// 		});
-// 		return acc;
-// 	}, {})).sort((a, b) => b[1].length - a[1].length);
-
-// 	const favoriteActors = Object.entries(dedupedData.reduce((acc, d) => {
-// 		d.actors && d.actors.forEach((actor) => {
-// 			if (actor in acc) {
-// 				acc[actor].push(d);
-// 			}
-// 			else {
-// 				acc[actor] = [d];
-// 			}
-// 		});
-// 		return acc;
-// 	}, {})).sort((a, b) => b[1].length - a[1].length);
-
-// 	console.log(favoriteDirectors, favoriteActors)
-
-// 	const timeSpentTotal = data.sum('runtime');
-
-// 	const timeSpentInTheaters = data.filter((d) => d.medium === 'Cinéma').sum('runtime');
-
-// 	const timeSpentOnNetflix = data.filter((d) => d.medium === 'Netflix').sum('runtime');
-
-// 	const timeSpentAccompanied = data.filter((d) => d.companions).sum('runtime');
-
-// 	console.log(timeSpentTotal, timeSpentInTheaters, timeSpentOnNetflix, timeSpentAccompanied)
-
-// 	return {
-// 		favoriteDirectors,
-// 		favoriteActors,
-// 		timeSpentTotal,
-// 		timeSpentInTheaters,
-// 		timeSpentOnNetflix,
-// 		timeSpentAccompanied
-// 	};
-// }
-
-
 const formatPercentage = (nb, decimals = 1) => {
 	return `${(nb * 100).toLocaleString('fr-FR', {
 		maximumFractionDigits: decimals
@@ -193,7 +143,6 @@ const formatString = (str, data) => {
 		.replace('{{ NB_COUNTRIES }}', [...new Set(unique.map((d) => d.country))].length)
 		.replace('{{ NB_FEMALE_DIRECTORS }}', unique.filter((d) => d.femaleDirector).length);
 		
-	// console.log([...group(data, (d) => d.country).entries()].sort((a, b) => b[1].length - a[1].length))
 	return typografix(output);
 }
 
@@ -260,7 +209,7 @@ const isInCategory = (d, category) => {
 		case 'rewatch':
 			return d.rewatch;
 		case 'discovery':
-			return ((d.medium.includes('Cinéma')  && d.year < 2022) || (!d.medium.includes('Cinéma') && d.year < 2022)) && !d.rewatch;
+			return ((d.medium.includes('Cinéma') && d.year < 2022) || (!d.medium.includes('Cinéma') && d.year < 2022)) && !d.rewatch;
 		case 'spielberg':
 			return d.director ? d.director === 'Steven Spielberg' : d.directors.includes('Steven Spielberg');
 		case 'clubEtoile':
@@ -275,7 +224,6 @@ export {
 	typografix,
 	preloadImages,
 	preloadPosters,
-	// getStats,
 	formatPercentage,
 	formatTime,
 	formatDuration,

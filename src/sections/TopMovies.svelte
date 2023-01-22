@@ -20,7 +20,7 @@
 			<div class='wrapper'>
 				<h3>{10 - i}. {@html typografix(movie.title)}</h3>
 				<h4>réal. {@html movie.director || formatList(movie.directors)}</h4>
-				<img src='stills/{movie.imdbId}.jpg' />
+				<img src='stills/{movie.imdbId}.jpg' alt='' />
 			</div>
 			<div class='content'>
 				<div class='quote'>

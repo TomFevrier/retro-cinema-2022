@@ -69,7 +69,6 @@
 	$: activeStep && activeStep.action();
 
 	let circles;
-	// $: console.log(circles);
 
 	let hovered = null;
 
@@ -85,19 +84,7 @@
 
 	$: mediumScale = scaleOrdinal()
 		.domain(media)
-		.range(media
-			.map((_, i, array) => {
-				const size = array.slice(0, i + 1).reduce((acc, medium) => acc + Math.sqrt(dataByMedium.get(medium).length), 0);
-				const sum = array.reduce((acc, medium) => acc + Math.sqrt(dataByMedium.get(medium).length), 0);
-				return size / sum * width;
-			})
-			.map((x, i, array) => {
-				if (i === 0) {
-					return x / 2 - 16;
-				}
-				return (x + array[i - 1]) / 2 - 16;
-			})
-		);
+		.range([0.1, 0.4, 0.6, 0.75, 0.85, 0.95].map((d) => d * width));
 
 
 	$: runtimeScale = scaleSqrt()
@@ -318,7 +305,11 @@
 			action: () => metric = 'female-directors'
 		},
 		{
-			text: texts.femaleDirectors.slice(1),
+			text: texts.femaleDirectors[1],
+			action: () => metric = 'female-directors'
+		},
+		{
+			text: texts.femaleDirectors.slice(2),
 			action: () => metric = 'female-directors'
 		},
 		{
@@ -390,11 +381,21 @@
 					{/each}
 				</div>
 			</div>
-			<Annotation x={getDatePosition(new Date('2022-01-28')).x} y={getDatePosition(new Date('2022-01-28')).y + CELL_SIZE_CALENDAR * 0.5}>
-				Festival de Gérardmer
+			<Annotation direction='top'
+				x={getDatePosition(new Date('2022-01-28')).x}
+				y={getDatePosition(new Date('2022-01-28')).y + CELL_SIZE_CALENDAR * 0.5}
+				offset={CELL_SIZE_CALENDAR}
+				length='10rem'
+			>
+				Festival<br />de Gérardmer
 			</Annotation>
-			<Annotation x={getDatePosition(new Date('2022-02-06')).x} y={getDatePosition(new Date('2022-02-06')).y + CELL_SIZE_CALENDAR * 0.5}>
-				Marathon Le Seigneur des Anneaux<br />au Grand Rex
+			<Annotation direction='bottom'
+				x={getDatePosition(new Date('2022-02-06')).x}
+				y={getDatePosition(new Date('2022-02-06')).y + CELL_SIZE_CALENDAR * 0.5}
+				offset={CELL_SIZE_CALENDAR}
+				length='18rem'
+			>
+				Marathon<br />Le Seigneur des Anneaux<br />au Grand Rex
 			</Annotation>
 		{:else if metric === 'release-date'}
 			<Axis {width} {height} padding={PADDING} scale={releaseDateScale} nbTicks={innerWidth / 80} tickTemplate='%Y' />
@@ -443,6 +444,7 @@
 							class='poster'
 							class:visible={metric === 'grid'}
 							src={posters.get(d.imdbId || d.title).src}
+							alt={d.title}
 							on:error|preventDefault={(e) => e.target.style.visibility = 'hidden'} />
 					</div>
 				{/each}
@@ -625,7 +627,6 @@
 
 		&.grid {
 			.item {
-				// aspect-ratio: 2/3;
 				width: 100%;
 				opacity: 0.2 !important;
 				transition: opacity $animation-duration $animation-timing-function;
@@ -773,25 +774,26 @@
 				flex-direction: column;
 				align-items: center;
 
-				&::after {
+				&::before {
 					content: '';
 					width: 2px;
 					height: 8rem;
 					position: absolute;
-					left: calc(50% - 1px);
-					background: darkgrey;
+					left: 50%;
+					transform: translateX(-50%);
+					background: lightgrey;
 					opacity: 0;
 					border-radius: 1px;
 				}
 
-				&.show-line::after {
+				&.show-line::before {
 					opacity: 1;
 				}
 
 				&:nth-child(2n+1) {
 					bottom: calc(50% + 8rem);
 
-					&::after {
+					&::before {
 						top: 100%;
 					}
 				}
@@ -799,7 +801,7 @@
 				&:nth-child(2n) {
 					top: calc(50% + 8rem);
 
-					&::after {
+					&::before {
 						bottom: 100%;
 					}
 				}

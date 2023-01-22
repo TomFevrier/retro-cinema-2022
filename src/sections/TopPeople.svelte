@@ -21,14 +21,14 @@
 			<h2>Top cinéastes de 2022</h2>
 			{#each topDirectors.slice(0, 10) as [director, movies]}
 				<div class='card'>
-					<img class='portrait' src='people/{director.replace(/\s/g, '-')}.jpg' />
+					<img class='portrait' src='people/{director.replace(/\s/g, '-')}.jpg' alt='' />
 					<div class='content'>
 						<h3>{director}</h3>
 						<div class='movies'>
 							{#each movies as movie}
 								<a href='https://imdb.com/title/{movie.imdbId}'>
 									<div class='poster'>
-										<img src={posters.get(movie.imdbId || movie.title).src} />
+										<img src={posters.get(movie.imdbId || movie.title).src} alt={movie.title} />
 									</div>
 								</a>
 							{/each}
@@ -41,14 +41,14 @@
 			<h2>Top interprètes de 2022</h2>
 			{#each topActors.slice(0, 10) as [actor, movies]}
 				<div class='card'>
-					<img class='portrait' src='people/{actor.replace(/\s/g, '-')}.jpg' />
+					<img class='portrait' src='people/{actor.replace(/\s/g, '-')}.jpg' alt='' />
 					<div class='content'>
 						<h3>{actor}</h3>
 						<div class='movies'>
 							{#each movies as movie}
 								<a href='https://imdb.com/title/{movie.imdbId}'>
 									<div class='poster'>
-										<img src={posters.get(movie.imdbId || movie.title).src} />
+										<img src={posters.get(movie.imdbId || movie.title).src} alt={movie.title} />
 									</div>
 								</a>
 							{/each}
